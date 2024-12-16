@@ -22,7 +22,7 @@ npm install -D tailwindcss postcss autoprefixer
 Ejecuta este comando para generar el archivo de configuración de Tailwind:
 
 ```bash
-npx tailwindcss init
+npx tailwindcss init -p
 ```
 
 Esto creará un archivo `tailwind.config.js` en la raíz de tu proyecto.
