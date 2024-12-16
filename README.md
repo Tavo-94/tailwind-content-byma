@@ -21,12 +21,6 @@ Ejecuta el siguiente comando en tu terminal para crear un nuevo proyecto:
 npm create vite@latest nombre-del-proyecto
 ```
 
-O si prefieres usar `yarn`:
-
-```bash
-yarn create vite nombre-del-proyecto
-```
-
 Luego, selecciona las siguientes opciones:
 
 - **Framework**: React
