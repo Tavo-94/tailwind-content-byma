@@ -46,12 +46,30 @@ function App() {
         </div>
 
         <div className="flex justify-center">
-          <ButtonConIA iconLeft={<PlusCircle size={24}/>} iconRight={<Trash2 size={24}/>} variant="primary" size="medium">
+          <ButtonConIA
+            iconLeft={<PlusCircle size={24} />}
+            iconRight={<Trash2 size={24} />}
+            variant="primary"
+            size="medium"
+          >
             Saludar
           </ButtonConIA>
         </div>
-        <div className="flex justify-center max-w-md">
-            <InputConIA className="" variant="default" iconLeft={<User size={24}/>} iconRight={<Trash2 size={24}/>} tamaño="large" label="Nombre" />
+        <div className="flex max-w-md justify-center">
+          <InputConIA
+            className=""
+            variant="default"
+            iconLeft={<User size={24} />}
+            iconRight={
+              <Trash2
+                onClick={() => alert("logica para borrar el campo")}
+                className="hover:cursor-pointer"
+                size={24}
+              />
+            }
+            tamaño="large"
+            label="Nombre"
+          />
         </div>
       </section>
     </>
