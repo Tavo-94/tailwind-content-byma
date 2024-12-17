@@ -14,6 +14,10 @@ function App() {
           Este es un div con muchas clases de Tailwind CSS
         </div>
 
+        <div className="custom-div">
+          Este es un div custom con css
+        </div>
+
         <BeforeDemo />
         <AfterTWDemo />
 
@@ -22,7 +26,7 @@ function App() {
             label="Primary"
             variant="primary"
             onClick={() => {
-              alert("Primary Button Clicked");
+              console.log("Primary button clicked");
             }}
           />
         </div>
