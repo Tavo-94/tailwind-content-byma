@@ -1,9 +1,10 @@
-import { PlusCircle, Trash2 } from "lucide-react";
+import { PlusCircle, Trash2, User } from "lucide-react";
 import "./App.css";
 import AfterTWDemo from "./components/before-after-demo/AfterTWDemo";
 import BeforeDemo from "./components/before-after-demo/BeforeDemo";
 import ButtonConIA from "./components/button-demo/ButtonConIA";
 import TailwindButton from "./components/button-demo/ButtonDemo";
+import InputConIA from "./components/input-demo/InputConIA";
 
 function App() {
   return (
@@ -48,6 +49,9 @@ function App() {
           <ButtonConIA iconLeft={<PlusCircle size={24}/>} iconRight={<Trash2 size={24}/>} variant="primary" size="medium">
             Saludar
           </ButtonConIA>
+        </div>
+        <div className="flex justify-center">
+            <InputConIA className="max-w-lg" variant="default" iconLeft={<User size={24}/>} tamaño="large" label="Nombre" />
         </div>
       </section>
     </>
