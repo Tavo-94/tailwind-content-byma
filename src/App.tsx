@@ -50,8 +50,8 @@ function App() {
             Saludar
           </ButtonConIA>
         </div>
-        <div className="flex justify-center">
-            <InputConIA className="max-w-lg" variant="default" iconLeft={<User size={24}/>} tamaño="large" label="Nombre" />
+        <div className="flex justify-center max-w-md">
+            <InputConIA className="" variant="default" iconLeft={<User size={24}/>} iconRight={<Trash2 size={24}/>} tamaño="large" label="Nombre" />
         </div>
       </section>
     </>
