@@ -1,6 +1,8 @@
+import { PlusCircle, Trash2 } from "lucide-react";
 import "./App.css";
 import AfterTWDemo from "./components/before-after-demo/AfterTWDemo";
 import BeforeDemo from "./components/before-after-demo/BeforeDemo";
+import ButtonConIA from "./components/button-demo/ButtonConIA";
 import TailwindButton from "./components/button-demo/ButtonDemo";
 
 function App() {
@@ -40,6 +42,12 @@ function App() {
           <button className="w-full rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 sm:w-auto">
             Ver Más
           </button>
+        </div>
+
+        <div className="flex justify-center">
+          <ButtonConIA iconLeft={<PlusCircle size={24}/>} iconRight={<Trash2 size={24}/>} variant="primary" size="medium">
+            Saludar
+          </ButtonConIA>
         </div>
       </section>
     </>
