@@ -5,11 +5,32 @@ import BeforeDemo from "./components/before-after-demo/BeforeDemo";
 import ButtonConIA from "./components/button-demo/ButtonConIA";
 import TailwindButton from "./components/button-demo/ButtonDemo";
 import InputConIA from "./components/input-demo/InputConIA";
+import FlexboxDemo, {
+  Footer,
+  HeaderLayout,
+  ImageGallery,
+  Navbar,
+  ProductGrid,
+} from "./components/layout-demo/FlexboxDemo";
+import { useForm, SubmitHandler } from "react-hook-form";
+import { useState } from "react";
+import ComboBox from "./components/ComboBoxConIA";
+
+interface FormValues {
+  country: string;
+}
 
 function App() {
+  const [selectedCountry, setSelectedCountry] = useState("");
+
+  const handleCountryChange = (value: string) => {
+    setSelectedCountry(value);
+    console.log("País seleccionado:", value);
+  };
+
   return (
     <>
-      <section className="container mx-auto grid grid-cols-1 gap-6 bg-gray-300 p-6">
+      <section className="container mx-auto grid grid-cols-1 gap-6 bg-gray-300">
         <h2 className="text-center text-3xl font-bold">
           Vite + React + TS + Tailwind
         </h2>
@@ -69,6 +90,30 @@ function App() {
             }
             tamaño="large"
             label="Nombre"
+          />
+        </div>
+
+        <FlexboxDemo />
+        <Navbar />
+        <ProductGrid />
+        <HeaderLayout />
+        <Footer />
+        <ImageGallery />
+
+        <div className="mx-auto min-h-96 mt-10 max-w-md rounded-lg bg-byma-primary p-4 shadow-md shadow-byma-primary">
+          <h1 className="mb-4 text-lg font-semibold text-gray-700 dark:text-white">
+            Selecciona un País
+          </h1>
+          <ComboBox
+            label="País"
+            options={[
+              { value: "ar", label: "Argentina" },
+              { value: "br", label: "Brasil" },
+              { value: "cl", label: "Chile" },
+            ]}
+            placeholder="Seleccione un país"
+            value={selectedCountry}
+            onChange={handleCountryChange}
           />
         </div>
       </section>
